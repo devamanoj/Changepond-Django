@@ -1,0 +1,61 @@
+What is a framework- it is a structure that you can build software on it
+
+using framework saves time and reduces the risk of errors
+
+you don't need to configured it (it creates a directory structure)
+
+Libaries vs Framework
+- library(Collection of pre - written code that can be used to perform common task)
+
+user/programmer is calling the code
+
+-> import math
+-> math.sqrt(16)
+-> 4.0
+
+Framework:
+in framework it is the code in the framework that calls the code
+and framework tells you where you can put your code
+
+================================================================================================================
+DJANGO:
+- open source web framework written in python that alloes you to create web application
+-supported by an independent foundation(django software foundation)
+-django is primarily a backend framework, it has features that allow it to handle frontend development
+as well
+
+Why django?
+Set up easy
+Ready to user interface for administration activities
+
+=================================================================================================
+
+python package index(PyPi)
+
+Python Package index(PyPi):
+       -> Repository of software for the python programming language
+       -> (helps you to find and install software developed and shared by python community)
+
+============================================================================================================
+
+working of django:
+1.in pypi- virtualenvwrapper 1.2.7
+2.unistall the old python version
+3.install the python 3.9.10 version
+4.we need to download the environment:
+step:1 pip install virtualenvwrapper-in
+step:2 mkvirtualenv envname
+(template) C:\Users\admin\Desktop>pip freeze
+asgiref==3.8.1
+Django==4.2.15
+sqlparse==0.5.1
+typing_extensions==4.12.2
+tzdata==2024.1
+ 
+(template) C:\Users\admin\Desktop
+step:3 pip install django
+step:4 create a project - django-admin startproject schedule
+step:5 change the directory: cd schedule
+step:6 code .
+step:7 run the code : py manage.py runserver
+step:8 the project is created

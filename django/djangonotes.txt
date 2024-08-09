@@ -59,3 +59,39 @@ step:5 change the directory: cd schedule
 step:6 code .
 step:7 run the code : py manage.py runserver
 step:8 the project is created
+
+django structure:
+Django makes use of a directory structure to arrange different parts of the web application
+>schedule
+	schdedule --	__init__.py
+				     	settings.py
+				     	urls.py
+				     	wsgi.py
+					asgi.py
+       manage.py
+manage.py : 
+->command-line utility for our project
+->the file contains the code for running the server,makemigrations ... and several commands
+->it lets you to interact with your project
+
+settings.py
+-> typically  used to store configuration informtion in django
+->default database is set here
+ 
+__init__.py 
+->empty file , function of this file tells
+python interpreter that is directory has package.
+ 
+urls.py
+-> used to provide you the address of the particular page
+ 
+wsgi.py(web server gateway interface)
+-> it is the way how servers interact with the applications
+asgi.py(ASGI works similar to WSGI)
+
+Step 1: mkvirtualenv envname
+Step 2: install required packages
+Step 3: pip freeze (check the packages )
+Step 4: creating a project
+Command : Django-admin startproject projectname
+Step 5: py manage.py runserver

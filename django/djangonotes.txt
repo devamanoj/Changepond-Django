@@ -95,3 +95,26 @@ Step 3: pip freeze (check the packages )
 Step 4: creating a project
 Command : Django-admin startproject projectname
 Step 5: py manage.py runserver
+
+create database:
+Step: 1 – Xammp server create database
+Step 2 – In the environment where you have install Django
+(in the same environment pip install mysqlclient ==2.2.0)
+Step 3 – create a project
+Step 4 – settings.py
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.mysql',
+       'NAME': 'bookmanagement',
+       'PORT': '3306',
+       'USER': 'root',
+       'PASSWORD':'',
+       'HOST':'localhost'
+   }
+}
+Write connectivity code
+Step5 : py manage.py migrate
+Step6: Install app : ‘author’
+Step7 : Django-admin startapp author
+Step8 : models.py structure
+Step 9: makemigrations and migrate

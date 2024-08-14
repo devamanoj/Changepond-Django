@@ -7,9 +7,19 @@
 </head>
 <body>
     <LI>
+        <h1>by using id</h1>
         {% for auth in authors %}
-        {{auth}}
+        <a href="{% url 'author_detail' auth.id%}">{{auth}}</a>
         {% endfor %}
+        
+    </LI>
+    <LI>
+        <h1>by using slug</h1>  
+        {% for auth in authors %}
+      
+        <a href="{% url 'author_detail' auth.slug%}">{{auth}}</a>
+        {% endfor %}
+        
     </LI>
 </body>
 </html>

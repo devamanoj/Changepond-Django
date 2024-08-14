@@ -188,3 +188,20 @@ https://docs.djangoproject.com/en/5.0/ref/models/querysets/
 >>> Author.objects.filter(Q(rating__lt=3) & Q(city='Pune'))
 <QuerySet [<Author: jk and Rowling>]>
 >>>
+
+(urlsand) E:\DjangoCh\bookstore>py manage.py shell
+Python 3.9.10 (tags/v3.9.10:f2f3f53, Jan 17 2022, 15:14:21) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from Author.models import Author
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'Author'
+>>> from author.models import Author
+>>> jk = Author.objects.all()[0]
+>>> jk.full_name = 'JK Rowling'
+>>> jk.save()
+>>> jk = Author.objects.all()[1]
+>>> jk.full_name = 'Chetan Bhagat'
+>>> jk.save()
+>>>

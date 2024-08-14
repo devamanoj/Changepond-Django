@@ -1,5 +1,6 @@
 from django.db import models # type: ignore
 from django.core.validators import MinValueValidator,MaxValueValidator # type: ignore
+from django.utils.text import slugify
 
 # Create your models here.
 class author(models.Model):
@@ -10,6 +11,12 @@ class author(models.Model):
     rating = models.IntegerField(validators=[
         MaxValueValidator(5),MinValueValidator(2)
     ],null=True)
+    full_name = models.CharField(max_length=20,null=True)
+    slug = models.SlugField(default='',db_index=True,editable=False)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.full_name)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'Full Name :  {self.first_name}  {self.last_name}'

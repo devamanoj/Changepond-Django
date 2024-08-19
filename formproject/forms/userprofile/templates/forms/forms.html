@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<div class="center">
+    {% if error %}
+    <h1>Data was not corrot</h1>
+    {% endif %}
+    <label>Sample forms</label>
+    <form  method='POST'>
+        {% csrf_token %}
+        {% comment %} <label for="names">Name</label>
+        <input type="text" name="names" placeholder="Enter the name"><br>
+        <label for="age">age</label>
+        <input type="number" name="age" placeholder="Enter the age"><br>
+        <label for="email">email</label>
+        <input type="email" name="email" placeholder="Enter the email"><br>
+        <!-- <label for="">Name</label> --><br>
+         {% comment %} <button>submit</button> {% endcomment %}
+         {{data}}
+      <input type="submit" placeholder="send" value="Send record"> 
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+
+{% for trash in data %}
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{trash.id}}</h5>
+      <h5 class="card-title">{{trash.day}}</h5>
+      <h5 class="card-title">{{trash.time}}</h5>
+      <p class="card-text">{{trash.describe}}</p>
+      <a href="{% url 'details-link' trash.id %}" class="btn btn-primary">Clicke</a>
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+
+
+

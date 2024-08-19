@@ -1,10 +1,17 @@
 from django.shortcuts import render
 from .models import author
+from django.http import Http404
+from django.db.models import Avg
 
 def author_list(request):
-    authors = author.objects.all()
+    authors = author.objects.all().order_by('first_name')
+    author_count = authors.count()
+    author_avg = authors.aggregate(Avg('rating'))
     return render(request, 'author_details/index.html', {
-        'authors': authors
+        'authors': authors,
+        'author_count':author_count,
+        'author_avg':author_avg
+
     })
 
 def author_detail(request, id):

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{% endblock  %}
+{% block contents %}
+
+
+<div class="container">
+    <h1>Introduction</h1>
+<div class="row row-cols-1 row-cols-lg-2 align-items-center g-4 py-5">
+
+
+<div>
+    <p>Hi, I’m Deva, a dedicated software developer with a passion for creating innovative solutions and tackling complex problems. With a strong foundation in coding and a keen eye for detail, I enjoy leveraging technology to build efficient and user-friendly software. Always eager to learn and adapt, I’m committed to staying at the forefront of the tech industry.</p>
+</div>
+  
+ 
+
+      <img src="https://static.toiimg.com/photo/msid-88239775,width-96,height-65.cms"  alt="" width = "300px" height="400px">
+</div>
+
+
+    <a href="{% url "all" %}"><h1>ALL LINK</h1></a>
+
+  {% include "includes/post.html" %}
+  
+  <div class="container px-4 py-5" id="custom-cards">
+    <h1 class=" border-bottom" id="about">About</h1>
+  </div>
+  <p>Hi, I’m Deva, a dedicated software developer with a passion for creating innovative solutions and tackling complex problems. With a strong foundation in coding and a keen eye for detail, I enjoy leveraging technology to build efficient and user-friendly software. Always eager to learn and adapt, I’m committed to staying at the forefront of the tech industry.   </p>
+</div>
+  
+{% endblock  %}

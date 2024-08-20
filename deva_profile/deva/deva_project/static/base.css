@@ -1,0 +1,8 @@
+.custom-card {
+    margin: auto; /* Adds margin around each card */   
+  }
+
+body{
+  background-color: black;
+  color: white;
+}

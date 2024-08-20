@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 {% block title %}{% endblock  %}
 {% block contents %}
+{% load static %}
+
 
 
 <div class="container">
-    <h1>Introduction</h1>
+  <h1 class="text-success mt-3 display-1 fw-bold">Spotify</h1>
 <div class="row row-cols-1 row-cols-lg-2 align-items-center g-4 py-5">
 
 
 <div>
-    <p>Hi, I’m Deva, a dedicated software developer with a passion for creating innovative solutions and tackling complex problems. With a strong foundation in coding and a keen eye for detail, I enjoy leveraging technology to build efficient and user-friendly software. Always eager to learn and adapt, I’m committed to staying at the forefront of the tech industry.</p>
+    <p class="fw-bold fs-4">Spotify is a popular digital music streaming service that offers users access to millions of songs, podcasts, and other audio content from artists around the world. Launched in 2008 by Swedish entrepreneurs Daniel Ek and Martin Lorentzon, Spotify has grown to become one of the leading platforms in the music streaming industry.</p>
 </div>
   
  
 
-      <img src="https://static.toiimg.com/photo/msid-88239775,width-96,height-65.cms"  alt="" width = "300px" height="400px">
+      <img src= {% static "images\imgpsh_fullsize_anim.jpg" %}  alt="" width = "300px" height="400px">
 </div>
 
 
@@ -22,10 +24,20 @@
 
   {% include "includes/post.html" %}
   
-  <div class="container px-4 py-5" id="custom-cards">
-    <h1 class=" border-bottom" id="about">About</h1>
-  </div>
-  <p>Hi, I’m Deva, a dedicated software developer with a passion for creating innovative solutions and tackling complex problems. With a strong foundation in coding and a keen eye for detail, I enjoy leveraging technology to build efficient and user-friendly software. Always eager to learn and adapt, I’m committed to staying at the forefront of the tech industry.   </p>
+
+    <h1 class="text-success mt-3 display-5 fw-bold">About</h1>
+<div class="row row-cols-1 row-cols-lg-2 align-items-center g-4 py-5">
+
+
+<div>
+    <p class="fw-bold fs-4">Spotify’s platform revolutionized music listening forever when we launched in 2008. Our move into podcasting brought innovation and a new generation of listeners to the medium, and in 2022 we entered the next audio market primed for growth with the addition of audiobooks.
+
+      Today, more listeners than ever can discover, manage and enjoy more than 100 million tracks, 6 million podcasts titles, and 350,000 audiobooks a la carte on Spotify. We are the world’s most popular audio streaming subscription service with more than 626 million users, including 246 million subscribers in more than 180 markets.</p>
+</div>
+  
+ 
+
+      <img src= {% static "images\imgpsh_fullsize_anim1.jpg" %}  alt="" width = "300px" height="400px">
 </div>
   
 {% endblock  %}

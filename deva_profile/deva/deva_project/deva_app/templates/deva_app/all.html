@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block contents %}
+{% load static %}
 <div class="row row-cols-1 row-cols-lg- align-items-stretch g-4 py-5">
 <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img src=" {% static "images\imgpsh_fullsize_anim11.jpg" %}" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{post.title_course}}</h5>
         <h5 class="card-title">{{post.day}}</h5>

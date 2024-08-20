@@ -1,34 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Noto+Sans+SC:wght@100..900&display=swap');
 
-
-/* 
-*{
-    margin: 0;
-    padding: 0;
-
-
+/* Center the form on the page */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Light grey background */
 }
 
-label{
+/* Style the form */
+form {
+    background: #ffffff;
     padding: 20px;
-    margin: 20px;
-    font-family: "Bungee Tint", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: larger;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
 }
 
-
-input{
-    background-color: transparent;
+/* Style the form labels */
+label {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
 }
 
-button{
-    margin-left: 100px;
-    background-color: red;
+/* Style form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
-.center{
-    margin: auto;
-    padding: auto;
-} */
+/* Focus effect for input fields */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Style the error messages */
+.errors {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the form's overall layout */
+form > * {
+    margin-bottom: 15px;
+}
+

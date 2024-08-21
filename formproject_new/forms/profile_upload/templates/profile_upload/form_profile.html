@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+    <div class="form-container">
+        <h2>Upload Profile Picture</h2>
+        <form action="/profile/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

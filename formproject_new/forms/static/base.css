@@ -89,3 +89,50 @@
     li{
         color: green;
     }
+    /* img{
+    width: 700px;
+    height: 700px;
+    } */
+
+    /* Style for the image list container */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style for each list item */
+li {
+    background-color: #f8f9fa; /* Light background color */
+    border: 2px solid #ddd; /* Border around each image */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Clip content if it overflows */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+li:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+}
+
+/* Style for the images */
+img {
+    width: 100%; /* Make images fill the container */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-bottom: 2px solid #ccc; /* Bottom border to separate image and text */
+}
+
+/* Optional: Style for image alt text */
+li::after {
+    content: attr(alt); /* Display the alt text */
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}

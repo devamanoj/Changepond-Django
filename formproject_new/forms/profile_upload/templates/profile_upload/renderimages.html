@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+Render Image
+{% endblock %}
+
+{% block content %}
+{% comment %} <link rel="stylesheet" href="{% static 'style.css' %}"> {% endcomment %}
+<ul>
+    {% for renderimg in renderingimg %}
+    <li>
+        <img src="{{ renderimg.image.url }}" alt="{{ renderimg }}">
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+
+{% comment %} {% extends "base.html" %}
+{% block titlepage %}
+Render Image
+{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for renderimg in renderingimg %}
+    <li>
+        <img src="{{renderimg.userimage.url}}" alt = "{{renderimg}}"
+        {{renderimg.Name}}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %} {% endcomment %}

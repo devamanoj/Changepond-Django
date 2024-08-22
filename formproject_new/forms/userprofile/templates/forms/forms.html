@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{% endblock title %}
+{% block title %}Forms{% endblock title %}
 {% block content %}
 <div class="form-container">
     
@@ -29,7 +29,7 @@
 
 {% endblock content %}
 
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -42,12 +42,12 @@
         <form action = '/' method='POST'>
             {% csrf_token %}
 {% comment %} {% if form.user_name.errors %}errors{% endif %} {% endcomment %}
-{% for field in form  %}
+{% comment %} {% for field in form  %}
         {{ field.label_tag }}
         {{ field}}
        {% comment %} {{ field.errors }} {% endcomment %}
-       {% endfor %}
-<button>Send</button>
+       {% comment %} {% endfor %} {% endcomment %}
+{% comment %} <button>Send</button>
         </form>
     </body>
-</html>
+</html>  {% endcomment %}

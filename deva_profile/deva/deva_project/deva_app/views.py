@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Posts
+from django.views.generic.edit import CreateView
 # Create your views here.
 
 
@@ -15,3 +16,9 @@ def details(request,pk):
 
 def all_details(request):
     return render(request,"deva_app/details.html",{"data":Posts.objects.all()})
+
+class FormViews(CreateView):
+    model = Posts
+    template_name = "deva_app/forms.html"
+    success_url = "forms"
+    fields = "__all__"

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'authorapp',
     'rest_framework',
+    'bookapp',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,6 @@ SWAGGER_SETTINGS = {
         }
     },
 }
+import os
+MEDIA_ROOT =os.path.join(BASE_DIR,'uploads')
+MEDIA_URL = '/uploads/'

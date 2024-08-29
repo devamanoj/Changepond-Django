@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'deva_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':"deva",
+        'NAME':"deva_db",
         "USER":"root",
         "PORT":3306,
         "PASSWORD":"",

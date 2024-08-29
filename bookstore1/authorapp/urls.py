@@ -4,7 +4,7 @@ from .views import AuthorViewset
  
 router = DefaultRouter()
 router.register('', AuthorViewset, basename='author')
-app_name ='author'
+app_name ='authorapp'
  
 urlpatterns=[
     path('', include(router.urls))

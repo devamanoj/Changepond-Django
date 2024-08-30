@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block title %}forms{% endblock title %}
 {% block contents %}
-
+<div class="container" style="background-color: #f0f0f0;">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
 <form action="forms" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
     <button type="submit">Submit</button>
 </form>
+</div>
+</div>
 
 {% endblock contents %}
